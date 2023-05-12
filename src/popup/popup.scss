@@ -1,0 +1,71 @@
+$border-color: #ddd;
+
+body {
+  background: #111;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  margin: 0;
+  padding: 12px;
+  width: 256px;
+
+  filter: invert(0.9) hue-rotate(180deg);
+
+  * {
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  button,
+  input,
+  select {
+    border-radius: 2px;
+    border: 1px solid $border-color;
+    padding: 2px;
+
+    &:focus-visible {
+      outline: 1px solid $border-color;
+    }
+  }
+
+  hr {
+    border: 1px solid $border-color;
+  }
+
+  form {
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      label + input {
+        margin-left: 8px;
+      }
+
+      button,
+      input:not([type='checkbox']),
+      select {
+        width: 88px;
+      }
+    }
+
+    button {
+      width: 100%;
+      padding: 4px;
+    }
+
+    hr {
+      border-width: 1px 0 0 0;
+    }
+  }
+
+  .no-margin-top {
+    margin-top: 0;
+  }
+}
+
+.flex1 {
+  flex: 1;
+}

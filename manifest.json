@@ -1,0 +1,20 @@
+{
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_title": "Manage window"
+  },
+  "author": "MetalTxus (Jesús Miguel Cruz Cana)",
+  "background": {
+    "service_worker": "src/background/background.js"
+  },
+  "description": "Enhances management of browser windows.",
+  "icons": {
+    "16": "assets/icons/window/16px.png",
+    "48": "assets/icons/window/48px.png",
+    "128": "assets/icons/window/128px.png"
+  },
+  "manifest_version": 3,
+  "name": "Window Manager",
+  "permissions": ["activeTab", "storage"],
+  "version": "1.0.0"
+}
