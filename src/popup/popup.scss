@@ -1,16 +1,22 @@
-$border-color: #ddd;
-$bg-color: #111;
-$fg-color: #bbb;
+$border-color: #5f6368;
+$hr-color: #3f4042;
+$bg-color: #292a2d;
+$bg-dark-color: #202124;
+$bg-hover-color: #31353c;
+$fg-color: #fff;
+
+$font-size: 13px;
 
 body {
   background: $bg-color;
+  border: 1px solid $hr-color;
+  border-bottom-width: 2px;
+  color: $fg-color;
   font-family: 'Roboto', sans-serif;
-  font-size: 14px;
+  font-size: $font-size;
   margin: 0;
   padding: 12px;
   width: 256px;
-
-  filter: invert(0.9) hue-rotate(180deg);
 
   * {
     box-sizing: border-box;
@@ -23,13 +29,34 @@ body {
   button,
   input,
   select {
+    background: $bg-dark-color;
     border-radius: 2px;
     border: 1px solid $border-color;
-    padding: 2px;
+    color: $fg-color;
+    font-size: $font-size;
+    padding: 3px;
 
     &:focus-visible {
       outline: 1px solid $border-color;
     }
+  }
+
+  button {
+    transition: 150ms;
+    background: $bg-color;
+
+    &:hover {
+      background: $bg-hover-color;
+    }
+  }
+
+  button,
+  input[type='checkbox'] {
+    cursor: pointer;
+  }
+
+  input[type='checkbox'] {
+    filter: invert(0.9) hue-rotate(180deg);
   }
 
   option {
@@ -40,12 +67,8 @@ body {
     }
   }
 
-  button {
-    cursor: pointer;
-  }
-
   hr {
-    border: 1px solid $border-color;
+    border: 1px solid $hr-color;
   }
 
   form {
@@ -53,6 +76,7 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin: 0.75em 0;
 
       label + input {
         margin-left: 8px;
@@ -69,10 +93,10 @@ body {
       width: 100%;
       padding: 4px;
     }
+  }
 
-    hr {
-      border-width: 1px 0 0 0;
-    }
+  h3 {
+    font-weight: normal;
   }
 
   .no-margin-top {
