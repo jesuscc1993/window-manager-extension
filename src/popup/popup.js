@@ -43,12 +43,13 @@ const initialize = () => {
 
 const openNewWindow = () => {
   const { domain, settings } = state;
-  const { type, url, ...formData } = getFormData($('#open-new-window'));
+  const { url, ...formData } = getFormData($('#open-new-window'));
   const height = stringToNumber(formData.height);
   const left = stringToNumber(formData.left);
   const top = stringToNumber(formData.top);
   const width = stringToNumber(formData.width);
   const replaceWindow = stringToBool(formData.replaceWindow);
+  const type = formData.type;
 
   tabs.query({ active: true, currentWindow: true }, ([activeTab]) => {
     storage.sync.set(
