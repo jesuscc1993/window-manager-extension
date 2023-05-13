@@ -1,7 +1,9 @@
 $border-color: #ddd;
+$bg-color: #111;
+$fg-color: #bbb;
 
 body {
-  background: #111;
+  background: $bg-color;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   margin: 0;
@@ -28,6 +30,18 @@ body {
     &:focus-visible {
       outline: 1px solid $border-color;
     }
+  }
+
+  option {
+    background: $bg-color;
+
+    &:not([disabled]) {
+      color: $fg-color;
+    }
+  }
+
+  button {
+    cursor: pointer;
   }
 
   hr {
