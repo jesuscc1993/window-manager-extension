@@ -10,6 +10,7 @@
   "description": "Enhances management of browser windows.",
   "icons": {
     "16": "assets/icons/window/16px.png",
+    "32": "assets/icons/window/32px.png",
     "48": "assets/icons/window/48px.png",
     "128": "assets/icons/window/128px.png"
   },
