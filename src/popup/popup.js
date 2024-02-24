@@ -57,7 +57,7 @@ const openNewWindow = () => {
         settings: {
           ...settings,
           newWindowFormData: {
-            ...((settings && settings.formData) || {}),
+            ...((settings && settings.newWindowFormData) || {}),
             [domain]: formData,
           },
         },
